@@ -113,6 +113,25 @@ main {
     gap: 5px;
 }
 
+.feedback {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.thumbs {
+    display: flex;
+    gap: 2vw;
+    margin-right: 27vw;
+}
+
+#opinions{
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    margin-top: 0;
+}
+
 .opinion-button {
     padding: 10px 20px;
     background-color: #333;
@@ -132,6 +151,71 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+}
+
+.highlight-text{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: rgba(223, 219, 219, 0.6);
+}
+
+#news-title{
+    text-align: center;
+}
+
+#news-subtitle{
+    text-align: center;
+}
+
+#background-img{
+    position: relative;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#background-img:hover{
+    cursor: pointer;
+}
+
+.nav-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 10px;
+    position: absolute;
+    top: 30%;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.left {
+    border-radius: 10px 0 0 10px;
+    position: absolute;
+    left: 5%;
+}
+
+.right {
+    border-radius: 0 10px 10px 0;
+    position: absolute;
+    right: 5%;
+}
+
+#thumb-up:hover {
+    cursor: pointer;
+    
+}
+
+#thumb-down:hover {
+    cursor: pointer;
 }
 
 @keyframes slideInFromLeft {

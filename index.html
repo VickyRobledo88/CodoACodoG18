@@ -6,6 +6,7 @@
     <title>DemocraticNews</title>
     <link rel="stylesheet" href="css/main_page_styles.css">
     <link rel="icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -17,8 +18,14 @@
         
         <nav>
             <ul>
-                <li><a href="pages/top.html">Top</a></li>
-                <li><a href="pages/about.html">Semanal</a></li>
+                <li>
+                    <a href="pages/top.html">Top</a>
+                    <select>
+                        <option value="1">Diario</option>
+                        <option value="2">Semanal</option>
+                        <option value="3">Mensual</option>
+                    </select>
+                </li>
                 <li><a href="pages/publish.html">Publique su noticia</a></li>
                 <li><a href="pages/weekly.html">Sobre Nosotros</a></li>
             </ul>
@@ -27,27 +34,27 @@
     
     <main>
         <section class="news-highlight">
-            <div class="highlight-text">
-                <h2>Título</h2>
-                <p>Breve descripción de la noticia, para poder acceder luego con más información.</p>
-            </div>
-            <div class="highlight-image">
-                <img src="images/news-anchor.jpg" alt="Noticiero">
+            <div onclick="loadNews()" id="background-img">
+                <button class="nav-button left" onclick="event.stopPropagation(); prevNews()"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-button right" onclick="event.stopPropagation(); nextNews()"><i class="fas fa-chevron-right"></i></button>
+                <div onclick="loadNews()" class="highlight-text">
+                    <h2 id="news-title">Título</h2>
+                    <h5 id="news-subtitle">Breve descripción de la noticia, para poder acceder luego con más información.</p>
+                </div>
             </div>
         </section>
         
         <section class="news-content">
-            <h2>Título</h2>
-            <h3>En esta sección iría el subtítulo, agrego texto para mostrar el límite.</h3>
+            <h2 id="main-title"></h2>
+            <h3 id="main-subtitle"></h3>
             <img src="images/news-image.jpg" alt="Noticia">
             <p>Acá iría todo el contenido de la noticia, bajando con el scroll.</p>
             <div class="feedback">
                 <p>¿Consideras correcta esta noticia?</p>
                 <div class="thumbs">
-                    <div class="thumb-up">👍 270</div>
-                    <div class="thumb-down">👎 17</div>
+                    <div id="thumb-up" onclick="thumbsUp()"></div>
+                    <div id="thumb-down" onclick="thumbsDown()"></div>
                 </div>
-                <button>Ver opiniones</button>
             </div>
         </section>
     </main>
@@ -55,5 +62,6 @@
     <footer>
         <p>&copy; 2024 DemocraticNews. Todos los derechos reservados.</p>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>

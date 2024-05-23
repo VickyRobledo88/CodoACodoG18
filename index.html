@@ -45,12 +45,15 @@
         </section>
         
         <section class="news-content">
-            <h2 id="main-title"></h2>
-            <h3 id="main-subtitle"></h3>
-            <img src="images/news-image.jpg" alt="Noticia">
-            <p>Acá iría todo el contenido de la noticia, bajando con el scroll.</p>
+            <div id="news-meta">
+                <img id="main-image" src="images/news-image.jpg" alt="Noticia">
+                <h2 id="main-title"></h2>
+                <h3 id="main-subtitle"></h3>
+            </div>
+            <p id="news-body"></p>
+            <br>
             <div class="feedback">
-                <p>¿Consideras correcta esta noticia?</p>
+                <h4>¿Consideras correcta esta noticia?</h4>
                 <div class="thumbs">
                     <div id="thumb-up" onclick="thumbsUp()"></div>
                     <div id="thumb-down" onclick="thumbsDown()"></div>

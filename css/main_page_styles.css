@@ -60,7 +60,6 @@ nav ul li:hover .dropdown {
 main {
     max-width: 800px;
     margin: 20px auto;
-    padding: 20px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -91,9 +90,9 @@ main {
 }
 
 .news-content {
-    margin-top: 20px;
+    padding: 0 2vw 2vh;
     overflow-y: auto;
-    height: 40vh;
+    height: 50vh;
 }
 
 .news-content img {
@@ -215,7 +214,7 @@ footer {
 
 #background-img{
     position: relative;
-    height: 30vh;
+    height: 27vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -263,6 +262,87 @@ footer {
 
 #thumb-down:hover {
     cursor: pointer;
+}
+
+.top-container {
+    display: flex;
+    width: 80%;
+    height: 80%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.news-list {
+    width: 60%;
+    background-color: #f4f4f4;
+}
+
+.news-item {
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#news-1 {
+    background-image: url(../assets/news1.jpg);
+}
+
+#news-2 {
+    background-image: url(../assets/news2.jpg);
+}
+
+#news-3 {
+    background-image: url(../assets/news3.jpg);
+}
+
+#news-4 {
+    background-image: url(../assets/news4.jpg);
+}
+
+.news-item h3 {
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+    background: rgba(223, 219, 219, 0.6);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.news-detail {
+    width: 100%;
+    overflow-y: auto;
+}
+
+.news-detail img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.news-detail h2 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.news-detail h4 {
+    font-size: 18px;
+    margin: 0 0 20px;
+    color: #666;
+}
+
+.news-detail p {
+    font-size: 16px;
+    color: #333;
 }
 
 @keyframes slideInFromLeft {

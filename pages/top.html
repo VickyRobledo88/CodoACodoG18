@@ -33,29 +33,29 @@
     <main>
         <div class="top-container">
             <div class="news-list">
-                <div id="news-1" class="news-item" onclick="loadNews(news1)">
-                    <h3>Jujuy, un destino ideal</h3>
+                <div id="news-img-1" class="news-item" onclick="loadNewsByNumber(0)">
+                    <h3 id="news-title-1"></h3>
                 </div>
-                <div id="news-2" class="news-item" onclick="loadNews(news2)">
-                    <h3>Sube el dólar</h3>
+                <div id="news-img-2" class="news-item" onclick="loadNewsByNumber(1)">
+                    <h3 id="news-title-2"></h3>
                 </div>
-                <div id="news-3" class="news-item" onclick="loadNews(news3)">
-                    <h3>¿Se viene la nieve?</h3>
+                <div id="news-img-3" class="news-item" onclick="loadNewsByNumber(2)">
+                    <h3 id="news-title-3"></h3>
                 </div>
-                <div id="news-4" class="news-item" onclick="loadNews(news4)">
-                    <h3>Otra noticia</h3>
+                <div id="news-img-4" class="news-item" onclick="loadNewsByNumber(3)">
+                    <h3 id="news-title-4"></h3>
                 </div>
             </div>
             <div class="news-detail">
-                <img id="news-image" src="../assets/news1.jpg" alt="Noticia">
-                <h2 id="news-title">Título</h2>
-                <h4 id="news-subtitle">En esta sección irá el subtítulo, agrego texto para mostrar el límite.</h4>
-                <p id="news-body">Aquí irá todo el contenido de la noticia, bajando con el scroll</p>
+                <img id="main-image" class="top-main-image" alt="Noticia">
+                <h2 id="main-title"></h2>
+                <h4 id="main-subtitle"></h4>
+                <p id="news-body"></p>
                 <div class="feedback">
                     <p>¿Consideras correcta esta noticia?</p>
                     <div>
-                        <span>👍</span> <span id="thumbs-up">270</span>
-                        <span>👎</span> <span id="thumbs-down">17</span>
+                        <div id="thumb-up" onclick="thumbsUp()"></div>
+                        <div id="thumb-down" onclick="thumbsDown()"></div>
                     </div>
                 </div>
             </div>
@@ -65,5 +65,6 @@
     <footer>
         <p>&copy; 2024 DemocraticNews. Todos los derechos reservados.</p>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
 </html>

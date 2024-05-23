@@ -1,5 +1,5 @@
 var news1 = {
-    image: '../assets/news1.jpg',
+    image: '../assets/daily_top/news1.jpg',
     title: 'Jujuy, un destino ideal',
     subtitle: 'En esta fecha, Jujuy puede ser un excelente destino para vacacionar',
     body: `Jujuy, una provincia situada en el noroeste de Argentina, se presenta como un destino inigualable para quienes buscan una mezcla perfecta de naturaleza, cultura y aventura. Con su impresionante diversidad geográfica que abarca desde la aridez de la Puna hasta la exuberancia de las yungas, Jujuy ofrece paisajes que parecen sacados de un sueño.
@@ -17,7 +17,7 @@ var news1 = {
 };
 
 var news2 = {
-    image: '../assets/news2.jpg',
+    image: '../assets/daily_top/news2.jpg',
     title: 'Sube el dólar',
     subtitle: 'Una vez más, la subida del dólar genera un gran desorden económico',
     body: `Una vez más, la subida del dólar ha provocado un considerable desorden económico en varios sectores. El aumento del valor de la divisa norteamericana frente al peso ha generado incertidumbre y preocupación entre los ciudadanos y los empresarios, quienes ven cómo sus costos se incrementan y sus márgenes de ganancia se reducen.
@@ -35,7 +35,7 @@ var news2 = {
 };
 
 var news3 = {
-    image: '../assets/news3.jpg',
+    image: '../assets/daily_top/news3.jpg',
     title: '¿Se viene la nieve?',
     subtitle: 'El cambio de clima podría traer una sorpresa inesperada',
     body: `El cambio de clima podría traer una sorpresa inesperada este año: la posibilidad de una nevada en regiones donde es poco común. Los meteorólogos han estado observando un patrón inusual en las temperaturas y la formación de nubes, lo que sugiere que podríamos estar a punto de experimentar un fenómeno meteorológico raro.
@@ -52,12 +52,34 @@ var news3 = {
     voted: false
 };
 
+var news4 = {
+    image: '../assets/daily_top/news4.jpg',
+    title: 'Innovación en Energía Solar',
+    subtitle: 'Nuevas tecnologías prometen revolucionar el sector energético',
+    body: `El sector energético está a punto de experimentar una revolución gracias a las innovaciones en tecnología solar. Investigadores de todo el mundo están desarrollando paneles solares de última generación que no solo son más eficientes, sino también más asequibles.
 
-var news = [news1, news2, news3];
+    Una de las innovaciones más destacadas es el uso de perovskita, un material que podría aumentar significativamente la eficiencia de los paneles solares en comparación con los tradicionales de silicio. Los expertos creen que esta tecnología podría estar disponible comercialmente en los próximos años, lo que permitiría una adopción más amplia de la energía solar en hogares y empresas.
+
+    Además, se están explorando nuevas formas de integrar la energía solar en la vida cotidiana. Desde ventanas solares que generan electricidad hasta carreteras solares que pueden alimentar la iluminación urbana, las posibilidades son infinitas. Estas soluciones no solo ayudarán a reducir la dependencia de combustibles fósiles, sino que también contribuirán a combatir el cambio climático al disminuir las emisiones de gases de efecto invernadero.
+
+    Las empresas y los gobiernos están invirtiendo fuertemente en investigación y desarrollo para acelerar la transición hacia una energía más limpia y sostenible. Programas de incentivos y subsidios están ayudando a impulsar el crecimiento del mercado solar, haciendo que sea más accesible para el consumidor promedio.
+
+    En conclusión, la innovación en energía solar está allanando el camino hacia un futuro más verde y sostenible. Con el continuo avance de la tecnología y el apoyo de políticas públicas, la energía solar está destinada a jugar un papel crucial en la matriz energética global.`,
+    thumbsUp: 320,
+    thumbsDown: 10
+};
+
+
+var news = [news1, news2, news3, news4];
 var currentNews = 0;
 
 document.addEventListener('DOMContentLoaded', (_event) => {
-    changeNewsContext();
+    if (window.location.pathname === '/index.html') {
+        changeNewsContext();
+    }
+    if (window.location.pathname === '/pages/top.html') {
+        loadTopNews();
+    }
     loadNews();
 });
 
@@ -97,6 +119,26 @@ function setBody(){
     const body = document.getElementById('news-body');
     body.textContent = news[currentNews].body;
 
+}
+
+function loadNewsByNumber(newsNumber) {
+    currentNews = newsNumber;
+    loadNews();
+}
+
+function loadTopNews() {
+    const news1 = document.getElementById('news-img-1');
+    const news2 = document.getElementById('news-img-2');
+    const news3 = document.getElementById('news-img-3');
+    const news4 = document.getElementById('news-img-4');
+    news1.style.backgroundImage = 'url(' + news[0].image + ')';
+    news2.style.backgroundImage = 'url(' + news[1].image + ')';
+    news3.style.backgroundImage = 'url(' + news[2].image + ')';
+    news4.style.backgroundImage = 'url(' + news[3].image + ')';
+    document.getElementById('news-title-1').textContent = news[0].title;
+    document.getElementById('news-title-2').textContent = news[1].title;
+    document.getElementById('news-title-3').textContent = news[2].title;
+    document.getElementById('news-title-4').textContent = news[3].title;
 }
 
 function loadNews() {

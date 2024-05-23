@@ -19,15 +19,15 @@
         <nav>
             <ul>
                 <li>
-                    <a href="pages/top.html">Top</a>
+                    <a href="pages/top.html" onClick="updateTopNews();">Top</a>
                     <select>
-                        <option value="1">Diario</option>
-                        <option value="2">Semanal</option>
-                        <option value="3">Mensual</option>
+                        <option value="daily">Diario</option>
+                        <option value="weekly">Semanal</option>
+                        <option value="monthly">Mensual</option>
                     </select>
                 </li>
                 <li><a href="pages/publish.html">Publique su noticia</a></li>
-                <li><a href="pages/weekly.html">Sobre Nosotros</a></li>
+                <li><a href="pages/about.html">Sobre Nosotros</a></li>
             </ul>
         </nav>
     </header>
@@ -46,9 +46,11 @@
         
         <section class="news-content">
             <div id="news-meta">
-                <img id="main-image" alt="Noticia">
-                <h2 id="main-title"></h2>
-                <h3 id="main-subtitle"></h3>
+                <img id="index-main-image" class="main-image" alt="Noticia">
+                <div id="news-title-subtitle">
+                    <h2 id="main-title"></h2>
+                    <h3 id="main-subtitle"></h3>
+                </div>
             </div>
             <p id="news-body"></p>
             <br>

@@ -69,19 +69,167 @@ var news4 = {
     thumbsDown: 10
 };
 
+var dailyNews = [news1, news2, news3, news4];
 
-var news = [news1, news2, news3, news4];
+var news5 = {
+    image: '../assets/weekly_top/news5.jpg',
+    title: 'Avances en la Medicina Genómica',
+    subtitle: 'Nuevos descubrimientos en la medicina personalizada',
+    body: `La medicina genómica está revolucionando el campo de la salud al permitir tratamientos personalizados basados en el perfil genético de cada individuo. Recientemente, investigadores han identificado biomarcadores específicos que pueden predecir la respuesta a ciertos medicamentos, mejorando significativamente la eficacia de los tratamientos y reduciendo los efectos secundarios.
+
+    Estos avances no solo benefician a los pacientes con enfermedades complejas, como el cáncer, sino que también abren la puerta a nuevas terapias para enfermedades raras y crónicas. Los expertos anticipan que, en un futuro cercano, los exámenes genéticos serán una práctica común en el diagnóstico y tratamiento de muchas condiciones médicas.
+
+    En conclusión, la medicina genómica promete transformar la manera en que entendemos y tratamos las enfermedades, ofreciendo esperanzas renovadas a millones de personas en todo el mundo.`,
+    thumbsUp: 200,
+    thumbsDown: 5,
+    voted: false
+};
+
+var news6 = {
+    image: '../assets/weekly_top/news6.jpg',
+    title: 'Tecnología 5G',
+    subtitle: 'La llegada del 5G y sus implicaciones',
+    body: `La tecnología 5G está llegando rápidamente a las principales ciudades del mundo, prometiendo velocidades de conexión sin precedentes y una latencia extremadamente baja. Este avance tecnológico no solo mejorará la experiencia del usuario en dispositivos móviles, sino que también tendrá un impacto significativo en industrias como la automotriz, la salud y la manufactura.
+
+    La red 5G permitirá el desarrollo de ciudades inteligentes, vehículos autónomos y una mayor conectividad en el Internet de las Cosas (IoT), transformando la forma en que interactuamos con la tecnología en nuestra vida diaria. Sin embargo, también plantea desafíos en términos de seguridad y privacidad que deberán ser abordados cuidadosamente.
+
+    En resumen, la tecnología 5G tiene el potencial de cambiar radicalmente el panorama tecnológico y económico global, llevando la conectividad a un nivel completamente nuevo.`,
+    thumbsUp: 180,
+    thumbsDown: 8,
+    voted: false
+};
+
+var news7 = {
+    image: '../assets/weekly_top/news7.jpg',
+    title: 'Protección del Amazonas',
+    subtitle: 'Nuevas iniciativas para conservar la selva amazónica',
+    body: `La selva amazónica, conocida como el pulmón del mundo, enfrenta amenazas constantes debido a la deforestación y el cambio climático. En respuesta, varias organizaciones y gobiernos han lanzado nuevas iniciativas para proteger esta vital región.
+
+    Entre las medidas adoptadas se encuentran la implementación de tecnologías avanzadas para monitorear la deforestación, la promoción de prácticas agrícolas sostenibles y la creación de áreas protegidas. Además, se está trabajando en colaboración con las comunidades locales para fomentar el desarrollo económico que no dependa de la explotación de los recursos naturales.
+
+    En conclusión, la protección del Amazonas es crucial para la biodiversidad global y la lucha contra el cambio climático. Es esencial que los esfuerzos de conservación continúen y se fortalezcan para garantizar un futuro sostenible para esta región vital.`,
+    thumbsUp: 250,
+    thumbsDown: 12,
+    voted: false
+};
+
+var news8 = {
+    image: '../assets/weekly_top/news8.jpg',
+    title: 'Cambio en el Mundo Laboral',
+    subtitle: 'El impacto del teletrabajo en la productividad y la calidad de vida',
+    body: `El teletrabajo se ha convertido en una norma para muchas empresas desde la pandemia, transformando la forma en que entendemos el trabajo. Estudios recientes han demostrado que, en muchos casos, el teletrabajo puede aumentar la productividad y mejorar la calidad de vida de los empleados al reducir el tiempo de desplazamiento y ofrecer mayor flexibilidad.
+
+    Sin embargo, también plantea desafíos como la necesidad de una infraestructura tecnológica adecuada y la gestión de la carga laboral a distancia. Las empresas están adaptando sus políticas para equilibrar estos beneficios y desafíos, buscando maneras de mantener la cohesión del equipo y la comunicación efectiva.
+
+    En resumen, el teletrabajo ha llegado para quedarse, y su impacto a largo plazo seguirá moldeando el futuro del trabajo en todo el mundo.`,
+    thumbsUp: 300,
+    thumbsDown: 15,
+    voted: false
+};
+
+var weeklyNews = [news5, news6, news7, news8];
+
+var news9 = {
+    image: '../assets/monthly_top/news9.jpg',
+    title: 'Conservación de los Océanos',
+    subtitle: 'Esfuerzos globales para proteger la vida marina',
+    body: `La conservación de los océanos es una prioridad urgente a nivel mundial. Con la amenaza de la contaminación plástica, la sobrepesca y el cambio climático, diversas organizaciones y gobiernos están implementando medidas para proteger la vida marina y los ecosistemas acuáticos.
+
+    Entre las acciones destacan la creación de reservas marinas, la prohibición de plásticos de un solo uso y la promoción de prácticas pesqueras sostenibles. Además, se están llevando a cabo campañas de concienciación para educar al público sobre la importancia de los océanos y cómo cada individuo puede contribuir a su protección.
+
+    En conclusión, proteger los océanos es fundamental para mantener la biodiversidad y garantizar un planeta saludable para las futuras generaciones. Es crucial que continuemos trabajando juntos para preservar estos valiosos recursos naturales.`,
+    thumbsUp: 280,
+    thumbsDown: 20,
+    voted: false
+};
+
+var news10 = {
+    image: '../assets/monthly_top/news10.jpg',
+    title: 'Avances en Inteligencia Artificial',
+    subtitle: 'IA y su impacto en la vida cotidiana',
+    body: `La inteligencia artificial (IA) está cambiando rápidamente nuestra vida cotidiana, desde asistentes virtuales y chatbots hasta diagnósticos médicos y vehículos autónomos. Los avances en IA están haciendo que las tareas diarias sean más eficientes y accesibles.
+
+    Sin embargo, estos desarrollos también plantean cuestiones éticas y de privacidad que deben ser abordadas. Es esencial que se establezcan regulaciones claras para garantizar que el uso de IA sea seguro y beneficioso para todos.
+
+    En conclusión, la IA tiene el potencial de mejorar significativamente nuestra calidad de vida, siempre y cuando se gestione de manera responsable y ética.`,
+    thumbsUp: 350,
+    thumbsDown: 30,
+    voted: false
+};
+
+var news11 = {
+    image: '../assets/monthly_top/news11.jpg',
+    title: 'Energías Renovables en Auge',
+    subtitle: 'El crecimiento de las energías limpias a nivel global',
+    body: `Las energías renovables están en auge en todo el mundo, impulsadas por la necesidad de combatir el cambio climático y reducir la dependencia de los combustibles fósiles. La energía solar y eólica están liderando esta revolución, con numerosos proyectos nuevos en desarrollo.
+
+    Las inversiones en energías limpias están creciendo a un ritmo sin precedentes, y se espera que continúen aumentando a medida que las tecnologías mejoren y los costos disminuyan. Los gobiernos también están jugando un papel crucial al establecer políticas y subsidios que fomentan la adopción de energías renovables.
+
+    En conclusión, el auge de las energías renovables es una señal positiva para el futuro del planeta, mostrando que un cambio hacia una matriz energética más sostenible es posible.`,
+    thumbsUp: 400,
+    thumbsDown: 25,
+    voted: false
+};
+
+var news12 = {
+    image: '../assets/monthly_top/news12.jpg',
+    title: 'Innovaciones en Transporte Público',
+    subtitle: 'Nuevas soluciones para una movilidad sostenible',
+    body: `Las innovaciones en el transporte público están transformando las ciudades y mejorando la calidad de vida de sus habitantes. Desde autobuses eléctricos y sistemas de bicicletas compartidas hasta trenes de alta velocidad, las nuevas tecnologías están haciendo que el transporte sea más eficiente y ecológico.
+
+    Estas soluciones no solo reducen las emisiones de carbono, sino que también alivian la congestión del tráfico y mejoran la accesibilidad. Las ciudades de todo el mundo están adoptando estas innovaciones para crear redes de transporte más sostenibles y resilientes.
+
+    En conclusión, las innovaciones en el transporte público son clave para un futuro urbano más sostenible y eficiente, beneficiando tanto a las personas como al medio ambiente.`,
+    thumbsUp: 360,
+    thumbsDown: 18,
+    voted: false
+};
+
+var monthlyNews = [news9, news10, news11, news12];
+
+var news = dailyNews;
+let selectedOptionValue;
 var currentNews = 0;
 
 document.addEventListener('DOMContentLoaded', (_event) => {
+    let selectElement = document.querySelector('nav select');
+    let storedOption = localStorage.getItem('selectedOption');
+
+    if (storedOption) {
+        selectElement.value = storedOption;
+    }
+    
     if (window.location.pathname === '/index.html') {
         changeNewsContext();
     }
     if (window.location.pathname === '/pages/top.html') {
+        updateTopNews();
         loadTopNews();
     }
     loadNews();
 });
+
+document.querySelector('nav select').addEventListener('change', function(event) {
+    selectedOptionValue = event.target.value;
+    localStorage.setItem('selectedOption', selectedOptionValue);
+});
+
+function updateTopNews(){
+    selectedOptionValue = localStorage.getItem('selectedOption'); 
+    switch (selectedOptionValue) {
+        case 'daily':
+            news = dailyNews;
+            break;
+        case 'weekly':
+            news = weeklyNews;
+            break;
+        case 'monthly':
+            news = monthlyNews;
+            break;
+        default :
+            console.log('No news selected');
+    }
+}
 
 function nextNews() {
     currentNews = (currentNews + 1)
@@ -111,8 +259,8 @@ function setSubtitle(){
 }
 
 function setImage(){
-    const image = document.getElementById('main-image');
-    image.src = news[currentNews].image;
+    const image = document.getElementsByClassName('main-image');
+    image[0].src = news[currentNews].image;
 }
 
 function setBody(){
@@ -139,11 +287,13 @@ function loadTopNews() {
     document.getElementById('news-title-2').textContent = news[1].title;
     document.getElementById('news-title-3').textContent = news[2].title;
     document.getElementById('news-title-4').textContent = news[3].title;
+    loadThumbs();
 }
 
 function loadNews() {
     setImage();
     setBody();
+    loadThumbs();
     const mainTitle = document.getElementById('main-title');
     const mainSubtitle = document.getElementById('main-subtitle');
     mainTitle.textContent = news[currentNews].title;
@@ -154,6 +304,9 @@ function changeNewsContext() {
     setBackground();
     setTitle();
     setSubtitle();
+}
+
+function loadThumbs(){
     document.getElementById('thumb-up').textContent = "👍 " + news[currentNews].thumbsUp;
     document.getElementById('thumb-down').textContent = "👎 " + news[currentNews].thumbsDown;
 }

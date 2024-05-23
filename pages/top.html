@@ -19,13 +19,13 @@
                 <li>
                     <a href="top.html">Top</a>
                     <select>
-                        <option value="1">Diario</option>
-                        <option value="2">Semanal</option>
-                        <option value="3">Mensual</option>
+                        <option value="daily">Diario</option>
+                        <option value="weekly">Semanal</option>
+                        <option value="monthly">Mensual</option>
                     </select>
                 </li>
                 <li><a href="publish.html">Publique su noticia</a></li>
-                <li><a href="weekly.html">Sobre Nosotros</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
             </ul>
         </nav>
     </header>
@@ -47,15 +47,18 @@
                 </div>
             </div>
             <div class="news-detail">
-                <img id="main-image" class="top-main-image" alt="Noticia">
-                <h2 id="main-title"></h2>
-                <h4 id="main-subtitle"></h4>
-                <p id="news-body"></p>
-                <div class="feedback">
-                    <p>¿Consideras correcta esta noticia?</p>
-                    <div>
-                        <div id="thumb-up" onclick="thumbsUp()"></div>
-                        <div id="thumb-down" onclick="thumbsDown()"></div>
+                <img id="main-image" class="main-image" alt="Noticia">
+                <div id="top-content">
+                    <h2 id="main-title" style="margin-top: 0;"></h2>
+                    <h4 id="main-subtitle"></h4>
+                    <p id="news-body"></p>
+                    <br>
+                    <div class="feedback">
+                        <h4 id="feedback-text">¿Consideras correcta esta noticia?</p>
+                        <div>
+                            <div id="thumb-up" onclick="thumbsUp()"></div>
+                            <div id="thumb-down" onclick="thumbsDown()"></div>
+                        </div>
                     </div>
                 </div>
             </div>

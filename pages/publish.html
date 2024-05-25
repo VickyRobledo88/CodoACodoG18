@@ -25,6 +25,80 @@
     </header>
     
     <main>
+        <form id="news-form">
+            <h2>Ingrese la noticia</h2>
+            <section>
+                <h3>Datos Personales</h3>
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required max length="50">
+                </div>
+                <br>
+                <div>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" required max length="50">
+                </div>
+                <br>
+                <div>
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="nombre@example.com">
+                </div>
+                <br>
+                <div class="gender">
+                    <label>Género: </label>
+                    <label><input type="radio" name="gender" value="masculino" required> Masculino</label>
+                    <label><input type="radio" name="gender" value="femenino" required> Femenino</label>
+                    <label><input type="radio" name="gender" value="otro" required> Otro</label>
+                </div>
+            </section>
+            
+            <section>
+                <h2>¿Cuál es su noticia?</h2>
+                <div>
+                    <label for="titular">Títular</label>
+                    <input type="text" id="titular" name="titular" required max length="100">
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="subtitulo">Subtítulo</label>
+                    <input type="text" id="subtitulo" name="subtitulo" max length="150">
+                </div>
+                <br>
+                <div>
+                    <label for="tipo">Tipo: </label>
+                    <select id="tipo" name="tipo" required aria-placeholder="Seleccione">
+                        <option value="noticia">Noticia</option>
+                        <option value="opinion">Opinión</option>
+                        <option value="reporte">Reporte</option>
+                        <option value="politica">Politica</option>
+                        <option value="policial">Policial</option>
+                        <option value="espectaculo">Espectaculo</option>
+                        <option value="viaje">Viaje</option>
+                        <option value="fenomenoclimatico">Fenómeno climático</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="imagen">Imagen</label>
+                    <input type="file" id="imagen" name="imagen" accept="image/*">    
+                </div>
+                <br>
+                <div>
+                    <label for="descripcion">Descripción de la Noticia</label>
+                    <textarea id="descripcion" name="descripcion" cols="100" rows="15" maxlength="1500"required></textarea>
+                   
+                </div>
+                
+            </section>
+                      
+            
+            <div class="buttons">
+                <button type="reset" class="reset-btn">Limpiar formulario</button>
+                <button type="submit" class="submit-btn">Enviar formulario</button>
+            </div>
+        </form>
     </main>
     
     <footer>

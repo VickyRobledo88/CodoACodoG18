@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DemocraticNews</title>
     <link rel="stylesheet" href="../css/main_page_styles.css">
+    <link rel="stylesheet" href="../css/publish_styles.css">
     <link rel="icon" href="../assets/logo.png" type="image/x-icon">
 </head>
 <body>
@@ -16,19 +17,106 @@
         
         <nav>
             <ul>
-                <li><a href="top.html">Top</a></li>
-                <li><a href="about.html">Semanal</a></li>
+                <li>
+                    <a href="top.html" onClick="updateTopNews();">Top</a>
+                    <select>
+                        <option value="daily">Diario</option>
+                        <option value="weekly">Semanal</option>
+                        <option value="monthly">Mensual</option>
+                    </select>
+                </li>
                 <li><a href="publish.html">Publique su noticia</a></li>
-                <li><a href="weekly.html">Sobre Nosotros</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
+        <div id="news-form">
+        <form>
+            <h2 class="form-title">Ingrese la noticia</h2>
+            <section id="form-container">
+                <h3 class="form-title">Datos Personales</h3>
+                <div class="form-group">
+                    <label class="form-label" for="nombre">Nombre:</label>
+                    <input class="form-input" type="text" id="nombre" name="nombre" required max length="20" placeholder="Ingrese su nombre">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label class="form-label" for="apellido">Apellido:</label>
+                    <input class="form-input" type="text" id="apellido" name="apellido" required max length="20" placeholder="Ingrese su apellido">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label class="form-label" for="email">Correo electrónico:</label>
+                    <input class="form-input" type="email" id="email" name="email" required placeholder="nombre@example.com">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label class="form-label" class="radio-label">Género: </label>
+                    <div class="form-input" id="gender-radio">
+                    <label class="radio-label">Masculino</label><input class="radio-input" type="radio" name="gender" value="masculino" required>
+                    <label class="radio-label">Femenino</label><input class="radio-input" type="radio" name="gender" value="femenino" required>
+                    <label class="radio-label">Otro</label><input class="radio-input" type="radio" name="gender" value="otro" required>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h3 class="form-title">¿Cuál es su noticia?</h2>
+                <div class="form-group">
+                    <label class="form-label" for="titular" >Títular:</label>
+                    <input class="form-input" type="text" id="titular" name="titular" required max length="100" placeholder="Ingrese el titulo">
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label class="form-label" for="subtitulo">Subtítulo:</label>
+                    <input class="form-input" type="text" id="subtitulo" name="subtitulo" max length="150" placeholder="Ingrese el subtitulo">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label class="form-label" for="tipo">Tipo: </label>
+                    <select class="form-input" id="tipo" name="tipo" required aria-placeholder="Seleccione">
+                        <option value="noticia">Noticia</option>
+                        <option value="opinion">Opinión</option>
+                        <option value="reporte">Reporte</option>
+                        <option value="politica">Politica</option>
+                        <option value="policial">Policial</option>
+                        <option value="espectaculo">Espectaculo</option>
+                        <option value="viaje">Viaje</option>
+                        <option value="fenomenoclimatico">Fenómeno climático</option>
+                    </select>
+                </div class="form-group">
+                <br>
+                <div class="form-group">
+                    <label class="form-label" for="imagen">Imagen:</label>
+                    <input class="form-input" type="file" id="imagen" name="imagen" accept="image/*">    
+                </div>
+                <br>
+                <div class="form-group">
+                    <label class="form-label" for="descripcion">Descripción de la Noticia:</label>
+                    <textarea class="form-input" id="descripcion" name="descripcion" cols="100" rows="15" maxlength="1500"required></textarea>
+                   
+                </div>
+                
+            </section>
+                      
+            
+            <div class="buttons">
+                <button type="reset" class="reset-btn">Limpiar formulario</button>
+                <button type="submit" class="submit-btn">Enviar formulario</button>
+            </div>
+        </form>
+    </div>
     </main>
     
     <footer>
         <p>&copy; 2024 DemocraticNews. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/publish.js"></script>
 </body>
 </html>

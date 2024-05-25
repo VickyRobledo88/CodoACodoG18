@@ -1,4 +1,6 @@
+<!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +9,7 @@
     <link rel="stylesheet" href="../css/publish_styles.css">
     <link rel="icon" href="../assets/logo.png" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -14,7 +17,7 @@
                 <img id="logo-img" src="../assets/logo.png" alt="DemocraticNews Logo">
             </a>
         </div>
-        
+
         <nav>
             <ul>
                 <li>
@@ -30,88 +33,99 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <div id="news-form">
-        <form>
-            <h2 class="form-title">Ingrese la noticia</h2>
-            <section id="form-container">
-                <h3 class="form-title">Datos Personales</h3>
-                <div class="form-group">
-                    <label class="form-label" for="nombre">Nombre:</label>
-                    <input class="form-input" type="text" id="nombre" name="nombre" required max length="20" placeholder="Ingrese su nombre">
-                </div>
-                <br>
-                <div class="form-group">
-                    <label class="form-label" for="apellido">Apellido:</label>
-                    <input class="form-input" type="text" id="apellido" name="apellido" required max length="20" placeholder="Ingrese su apellido">
-                </div>
-                <br>
-                <div class="form-group">
-                    <label class="form-label" for="email">Correo electrónico:</label>
-                    <input class="form-input" type="email" id="email" name="email" required placeholder="nombre@example.com">
-                </div>
-                <br>
-                <div class="form-group">
-                    <label class="form-label" class="radio-label">Género: </label>
-                    <div class="form-input" id="gender-radio">
-                    <label class="radio-label">Masculino</label><input class="radio-input" type="radio" name="gender" value="masculino" required>
-                    <label class="radio-label">Femenino</label><input class="radio-input" type="radio" name="gender" value="femenino" required>
-                    <label class="radio-label">Otro</label><input class="radio-input" type="radio" name="gender" value="otro" required>
+            <form>
+                <h2 class="form-title">Ingrese la noticia</h2>
+                <section id="form-container">
+                    <h3 class="form-title">Datos Personales</h3>
+                    <div class="form-group">
+                        <label class="form-label" for="nombre">Nombre:</label>
+                        <input class="form-input" type="text" id="nombre" name="nombre" required maxlength="20"
+                            placeholder="Ingrese su nombre">
                     </div>
-                </div>
-            </section>
-            
-            <section>
-                <h3 class="form-title">¿Cuál es su noticia?</h2>
-                <div class="form-group">
-                    <label class="form-label" for="titular" >Títular:</label>
-                    <input class="form-input" type="text" id="titular" name="titular" required max length="100" placeholder="Ingrese el titulo">
-                </div>
+                    <br>
+                    <div class="form-group">
+                        <label class="form-label" for="apellido">Apellido:</label>
+                        <input class="form-input" type="text" id="apellido" name="apellido" required maxlength="20"
+                            placeholder="Ingrese su apellido">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Correo electrónico:</label>
+                        <input class="form-input" type="email" id="email" name="email" required
+                            placeholder="nombre@example.com">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label class="form-label">Género: </label>
+                        <div class="form-input" id="gender-radio">
+                            <label class="radio-label">Masculino</label><input class="radio-input" type="radio"
+                                name="gender" value="masculino" required>
+                            <label class="radio-label">Femenino</label><input class="radio-input" type="radio"
+                                name="gender" value="femenino" required>
+                            <label class="radio-label">Otro</label><input class="radio-input" type="radio" name="gender"
+                                value="otro" required>
+                        </div>
+                    </div>
+                </section>
 
-                <br>
+                <section>
+                    <h3 class="form-title">¿Cuál es su noticia?</h3>
+                        <div class="form-group">
+                            <label class="form-label" for="titular">Títular:</label>
+                            <input class="form-input" type="text" id="titular" name="titular" required maxlength="100"
+                                placeholder="Ingrese el titulo">
+                        </div>
 
-                <div class="form-group">
-                    <label class="form-label" for="subtitulo">Subtítulo:</label>
-                    <input class="form-input" type="text" id="subtitulo" name="subtitulo" max length="150" placeholder="Ingrese el subtitulo">
+                        <br>
+
+                        <div class="form-group">
+                            <label class="form-label" for="subtitulo">Subtítulo:</label>
+                            <input class="form-input" type="text" id="subtitulo" name="subtitulo" maxlength="150"
+                                placeholder="Ingrese el subtitulo">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label class="form-label" for="tipo">Tipo: </label>
+                            <select class="form-input" id="tipo" name="tipo" required>
+                                <option value="" disabled selected>Seleccione</option>
+                                <option value="noticia">Noticia</option>
+                                <option value="opinion">Opinión</option>
+                                <option value="reporte">Reporte</option>
+                                <option value="politica">Politica</option>
+                                <option value="policial">Policial</option>
+                                <option value="espectaculo">Espectaculo</option>
+                                <option value="viaje">Viaje</option>
+                                <option value="fenomenoclimatico">Fenómeno climático</option>
+                            </select>
+                            
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label class="form-label" for="imagen">Imagen:</label>
+                            <input class="form-input" type="file" id="imagen" name="imagen" accept="image/*">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label class="form-label" for="descripcion">Descripción de la Noticia:</label>
+                            <textarea class="form-input" id="descripcion" name="descripcion" cols="100" rows="15"
+                                maxlength="1500" required></textarea>
+
+                        </div>
+
+                </section>
+
+
+                <div class="buttons">
+                    <button type="reset" class="reset-btn">Limpiar formulario</button>
+                    <button type="submit" class="submit-btn">Enviar formulario</button>
                 </div>
-                <br>
-                <div class="form-group">
-                    <label class="form-label" for="tipo">Tipo: </label>
-                    <select class="form-input" id="tipo" name="tipo" required aria-placeholder="Seleccione">
-                        <option value="noticia">Noticia</option>
-                        <option value="opinion">Opinión</option>
-                        <option value="reporte">Reporte</option>
-                        <option value="politica">Politica</option>
-                        <option value="policial">Policial</option>
-                        <option value="espectaculo">Espectaculo</option>
-                        <option value="viaje">Viaje</option>
-                        <option value="fenomenoclimatico">Fenómeno climático</option>
-                    </select>
-                </div class="form-group">
-                <br>
-                <div class="form-group">
-                    <label class="form-label" for="imagen">Imagen:</label>
-                    <input class="form-input" type="file" id="imagen" name="imagen" accept="image/*">    
-                </div>
-                <br>
-                <div class="form-group">
-                    <label class="form-label" for="descripcion">Descripción de la Noticia:</label>
-                    <textarea class="form-input" id="descripcion" name="descripcion" cols="100" rows="15" maxlength="1500"required></textarea>
-                   
-                </div>
-                
-            </section>
-                      
-            
-            <div class="buttons">
-                <button type="reset" class="reset-btn">Limpiar formulario</button>
-                <button type="submit" class="submit-btn">Enviar formulario</button>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
     </main>
-    
+
     <footer>
         <p>&copy; 2024 DemocraticNews. Todos los derechos reservados.</p>
     </footer>
@@ -119,4 +133,5 @@
     <script src="../js/main.js"></script>
     <script src="../js/publish.js"></script>
 </body>
+
 </html>
